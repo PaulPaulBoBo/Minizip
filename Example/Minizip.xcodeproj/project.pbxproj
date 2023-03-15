@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B9DDD0D9EC898DDBE3D00DE /* Pods_Minizip_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979445DFF2D1385C410813C0 /* Pods_Minizip_Tests.framework */; };
+		A3B9D8E3BF9E33D2FAA12A5C /* libPods-Minizip_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B65A18E08E477766890F0B62 /* libPods-Minizip_Tests.a */; };
 		ED83F68F20348A760038D96B /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F68E20348A760038D96B /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		32CFF57FD11827CE1BBA02D7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		32CFF57FD11827CE1BBA02D7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		57ED24FB3960941D130399A1 /* Pods-Minizip_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Minizip_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Minizip_Tests/Pods-Minizip_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6E76B7C47E09FE76E09F1CAE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		7A9E25F375E7EE00F3E2DDB3 /* Minizip.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Minizip.podspec; path = ../Minizip.podspec; sourceTree = "<group>"; };
-		979445DFF2D1385C410813C0 /* Pods_Minizip_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Minizip_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E76B7C47E09FE76E09F1CAE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7A9E25F375E7EE00F3E2DDB3 /* Minizip.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Minizip.podspec; path = ../Minizip.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B65A18E08E477766890F0B62 /* libPods-Minizip_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Minizip_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1441257130E52D8752CE6F5 /* Pods-Minizip_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Minizip_Tests.release.xcconfig"; path = "Target Support Files/Pods-Minizip_Tests/Pods-Minizip_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ED83F68A20348A760038D96B /* Minizip_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Minizip_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED83F68E20348A760038D96B /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B9DDD0D9EC898DDBE3D00DE /* Pods_Minizip_Tests.framework in Frameworks */,
+				A3B9D8E3BF9E33D2FAA12A5C /* libPods-Minizip_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,14 +41,13 @@
 				57ED24FB3960941D130399A1 /* Pods-Minizip_Tests.debug.xcconfig */,
 				D1441257130E52D8752CE6F5 /* Pods-Minizip_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		E8D7945826BF39CF52A21B99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				979445DFF2D1385C410813C0 /* Pods_Minizip_Tests.framework */,
+				B65A18E08E477766890F0B62 /* libPods-Minizip_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,7 +101,6 @@
 				ED83F68620348A760038D96B /* Sources */,
 				ED83F68720348A760038D96B /* Frameworks */,
 				ED83F68820348A760038D96B /* Resources */,
-				9F40EA528B03A4A3AFBF7942 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,10 +121,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					ED83F67720348A760038D96B = {
-						CreatedOnToolsVersion = 10.0;
-						ProvisioningStyle = Automatic;
-					};
 					ED83F68920348A760038D96B = {
 						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
@@ -183,24 +177,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F40EA528B03A4A3AFBF7942 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Minizip_Tests/Pods-Minizip_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Minizip/Minizip.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Minizip.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Minizip_Tests/Pods-Minizip_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -330,6 +306,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6S6F4R576X;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.Minizip-Tests";
@@ -346,6 +323,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6S6F4R576X;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.Minizip-Tests";

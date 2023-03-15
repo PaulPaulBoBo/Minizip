@@ -1,4 +1,7 @@
-use_frameworks!
+source 'https://github.com/PaulPaulBoBo/spec.git'
+
+#use_frameworks!
+
 target 'Minizip_Tests' do
   pod 'Minizip', :path => '../'
   
